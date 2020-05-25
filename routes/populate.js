@@ -53,8 +53,9 @@ router.post("/signup", (req, res) => {
         "email": req.body.email
     }
         
-    con.query('INSERT INTO users SET ?',users, function (err, results, fields) {
+    con.query('INSERT INTO users SET ?',users, function (err, results) {
         if (err) {
+            console.log(err);
             res.send({
               "status":400,
               "message":"failed, error ocurred"
