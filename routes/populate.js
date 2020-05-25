@@ -52,7 +52,7 @@ router.post("/signup", (req, res) => {
         "username": req.body.username,
         "email": req.body.email
     }
-        
+    
     con.query('INSERT INTO users SET ?',users, function (err, results) {
         if (err) {
             console.log(err);
