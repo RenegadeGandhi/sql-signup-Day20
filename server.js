@@ -14,7 +14,7 @@ app.use("/", populateRoute);
 
 
 app.use((req, res, next) => {
-    res.status(302).send(`Head over to /signup`);
+    res.status(302).send(`populate, delete and head over to /signup`);
 });
 
 app.listen(port, () => {
